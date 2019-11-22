@@ -2,23 +2,22 @@ let  baseUrl  =  "http://localhost:8080/damai";
 
 define(['jquery'],  function($)  {    
     return  {        
-        render:   function()  {
-            console.log(2);            
+        render:   function()  {           
             $.ajax({                
                 type:   "get",
                 url:  baseUrl + '/lib/getall.php',
                 dataType:   "json",
                 success: function(data)  {
                     var con = "";
+                    console.log(data);
                     data.forEach(value => {
-                        console.log(value.price);
                         var title = value.title;
                         var address = value.address;
                         var date = value.date;
                         var price = value.price;
                         var pic = value.picture;
                         con += `
-                        <a href="">
+                        <a href="../html/product.html">
                         <div class="itemimg"><img src="../img/${pic}" alt=""></div>
                         <div class="iteminfo">
                             <div class="title">
@@ -46,7 +45,7 @@ define(['jquery'],  function($)  {    
 
                         $('.box-right').html(con);
                     });                                              
-                }                      
+                }                    
             })        
         }    
     }

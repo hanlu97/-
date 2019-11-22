@@ -9,7 +9,7 @@ define(['jquery'], function($) {
                     $.ajax({
                         type: 'get',
                         url: baseUrl + '/lib/regist.php',
-                        dataType: "json",
+                        // dataType: "json",
                         data: {
                             phone: $('#reg_mobile').val(),
                             password: $('#reg_password').val()
@@ -18,7 +18,7 @@ define(['jquery'], function($) {
                             if (response.msg == 1 && password_Boolean && varconfirm_Boolean && Mobile_Boolean && Validation_Boolean == true) {
                                 //alert("注册成功");
                                 // console.log(response.msg);
-                                location.href = "http://localhost:8080/damai/src/html/load.html";
+                                location.href = "http://localhost:8080/damai/src/html/login.html";
                                 console.log("success");
                             }
                             //else if (typeof response == 'object') {

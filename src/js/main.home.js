@@ -1,5 +1,8 @@
 require.config({    
-    paths:  {         jquery:   "./jquery.min",         home:   "./lib/home"     },
+    paths:  {        
+        jquery:   "./jquery.min",
+        home:   "./lib/home"    
+    },
         shim:  {}
 });
 
