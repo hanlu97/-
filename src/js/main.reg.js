@@ -8,5 +8,5 @@ require.config({
 });
 
 require(['jquery', 'reg'], function($, reg) {
-    reg.get('.red_button')
+    reg.get('.red_button');
 });

@@ -1,22 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang=en>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <meta charset=UTF-8>
+    <meta name=viewport content="width=device-width, initial-scale=1.0">
+    <meta http-equiv=X-UA-Compatible content="ie=edge">
+    <title>cart</title>
     <link rel="stylesheet" href="../style/reset.css">
-    <link rel="stylesheet" href="../style/product.css">
+    <link rel="stylesheet" href="../style/cart.css">
+    <!-- <script src=script/require.js data-main=script/require.config id=current-page target-module=script/module/cart.js defer async></script> -->
+    <script src="../js/require.js" data-main="../js/main.cart"></script>
 </head>
-
 
 <body>
     <!-- 头部 -->
-
-
-
 
     <header>
         <!-- 导航 -->
@@ -45,34 +42,69 @@
                 <div class="login-user">
                     <img src="../img/login.png" alt="">
                     <span>登录
-                        <em>
-                            <a href="">个人信息</a>
-                            <a href="">账号设置</a>
-                            <a href="">订单管理</a>
-                        </em>
-                       
-                    </span>
+                            <em>
+                                <a href="">个人信息</a>
+                                <a href="">账号设置</a>
+                                <a href="">订单管理</a>
+                            </em>
+                           
+                        </span>
                     <img src="../img/phone.png" alt="">
                     <span>下载
-                        </span>
+                            </span>
                     <img src="../img/TB13UKCGQyWBuNjy0FpXXassXXa-54-54.png" alt="">
                     <span>English</span>
                 </div>
             </div>
         </div>
     </header>
-    <div class="add"></div>
 
 
 
+    <!-- 购物车 -->
 
-
-
-
-
-
-
+    <div class=dm-cart>
+        <div class=container-fluid>
+            <div class=contain>
+                <div class=cart-con>
+                    <div class=cart-h1 style="position: absolute;left: 60px;top: 55px;">共&nbsp;<span style="color: #ff1268">0</span>&nbsp;件商品</div>
+                    <table class=cart-thead>
+                        <thead>
+                            <tr>
+                                <th width=5%>全选<input class=all type=checkbox checked></th>
+                                <th width=15%>商品</th>
+                                <th width=33%>标题</th>
+                                <th width=11%>单价</th>
+                                <th width=16%>数量</th>
+                                <th width=12%>小计</th>
+                                <th width=6%>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody class="cart-order"></tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan=2 style="height: 90px; text-align: left;"></td>
+                                <td colspan=2 style="text-align: right; line-height: 1.8;">
+                                    <p id="heji">合计(不含运费):</p>
+                                </td>
+                                <td colspan=2 class=sum style="text-align: left; line-height: 1.8;">
+                                    <p class=total style="color: #ff1268;"></p>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <div class=btn-cart-groups>
+                        <form id=orderCheck method=post action=/order/check>
+                            <div class=btn-cart-groups-inner><a href=./home.html target=_blank class=pay-continue>继续购物</a> <a class=go-pay>立即结算</a></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- 尾部 -->
+
+
     <div class="footer">
         <div class="footer-content">
             <ul>
@@ -156,13 +188,6 @@
             </div>
         </div>
     </div>
-
 </body>
-
-
-<script src="../../node_modules/jquery/dist/jquery.min.js"></script>
-<script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="../js/require.js" data-main="../js/main.product.js"></script>
-
 
 </html>

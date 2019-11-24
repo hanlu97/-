@@ -5,20 +5,24 @@ define(['jquery'],  function($)  {    
         render:   function()  {           
             $.ajax({                
                 type:   "get",
-                url:  baseUrl + '/lib/getall.php',
+                // url:  baseUrl + '/lib/getall.php',
+                url: '../../lib/getall.php',
                 dataType:   "json",
                 success: function(data)  {
+                    console.log(data);
                     var con = "";
                     console.log(data);
                     data.forEach(value => {
+
                         var title = value.title;
                         var address = value.address;
                         var date = value.date;
                         var price = value.price;
-                        var pic = value.picture;
+                        var pic = JSON.parse(value.picture);
+                        console.log(pic[0].src)
                         con += `
-                        <a href="../html/product.html">
-                        <div class="itemimg"><img src="../img/${pic}" alt=""></div>
+                        <a href="../html/product.html?id=${value.id}">
+                        <div class="itemimg"><img src="../img/${pic[0].src}" alt=""></div>
                         <div class="iteminfo">
                             <div class="title">
                                ${title}

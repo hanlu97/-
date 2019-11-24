@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../style/reset.css">
     <link rel="stylesheet" href="../style/login.css">
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../js/lib/login.js"></script>
+
 </head>
 
 <body>
@@ -39,22 +42,25 @@
                     </ul>
                     <div class="show" id="none">
                         <!-- 输入框：请输入电话号码和邮箱 -->
+
                         <div class="fm-phone">
                             <label class="fm-label">
                               <i><img src="../img/yonghu.png" alt=""></i>
                            </label>
-                            <input type="text" placeholder="请输入手机号码或邮箱">
+
+                            <input type="text" placeholder="请输入手机号码或邮箱" id="userName">
                         </div>
                         <!-- 输入框：请输入登录密码 -->
                         <div class="fm-login">
                             <label class="fm-label">
                                   <i><img src="../img/suo.png" alt=""></i>
                                </label>
-                            <input type="password" placeholder="请输入登录密码 ">
+                            <input type="password" placeholder="请输入登录密码 " id="userPassword">
                         </div>
+
                         <!-- 红色登录框-->
                         <div class="fm-btn">
-                            <button type="button" class="fm-button">
+                            <button type="button" class="fm-button" id="btn">
                                 登录
                             </button>
                         </div>
@@ -203,14 +209,15 @@
     </footer>
     <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="../js/login.js"></script>
+
     <script src="../js/tabs.js"></script>
 
-    <!-- <script>
+
+    <script>
         $(function() {
             $('#tabs').tabs();
         });
-    </script> -->
+    </script>
     <script>
         $('.reg').on('click', function() {
             location.href = "http://localhost:8080/damai/src/html/registered.html"

@@ -1,18 +1,15 @@
 <?php
 
  include('./conn.php');
+ $id=$_REQUEST['id'];
 
-$sql = 'select * from detail';
+$sql = "select * from detail where id='$id'";
 
 $res = $mysqli->query($sql);
 
-$arr = array();
+$row = $res->fetch_assoc();
 
-while($row = $res->fetch_assoc()){
-    array_push($arr,$row);
-}
-
-$json = json_encode($arr);
+$json = json_encode($row);
 
 echo $json;
 
